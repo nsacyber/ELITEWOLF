@@ -5,6 +5,7 @@ WARNING: These signatures/analytics aren't necessarily malicious activity. They 
 
 
 Background
+
 Cyber actors have demonstrated their continued willingness to conduct malicious cyber activity
 against Critical Infrastructure (CI) by exploiting Internet-accessible and vulnerable Operational Technology (OT) assets. Due to the
 increase in adversary capabilities and activity, the criticality to U.S. national security and way of life, and the vulnerability
@@ -14,17 +15,20 @@ Please reference the following Cybersecurity Advisory for further background: PP
 
 
 SNORT Rules
+
 WARNING: These signatures/analytics aren't necessarily malicious activity. They will require follow on analysis to truly determine if this activity is malicious or not. The provided SNORT rules are alerting rules. Investigation for accuracy is required for hits. The rules have been tested, but every system can be configured differently, so ensure that the signature is triggered properly or is adjusted as needed based on the sensors and the environment.
 
 
 
 License
+
 See LICENSE.
 This Work was prepared by a United States Government employee and, therefore, is excluded from copyright by Section 105 of the Copyright Act of 1976.
 Copyright and Related Rights in the Work worldwide are waived through the CC0 1.0 Universal license.
 
 
 Contributing
+
 See CONTRIBUTING.
 All contributions to this project will be released as follows:
 
@@ -35,6 +39,7 @@ By submitting a pull request, you are agreeing to comply with this waiver of cop
 
 
 Disclaimer
+
 See DISCLAIMER.
 Disclaimer of Warranty
 This Work is provided "as is". Any express or implied warranties, including but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the United States Government be liable for any direct, indirect, incidental, special, exemplary or consequential damages (including, but not limited to, procurement of substitute goods or services, loss of use, data or profits, or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this Work, even if advised of the possibility of such damage.
@@ -42,4 +47,5 @@ The User of this Work agrees to hold harmless and indemnify the United States Go
 Nothing in this Work is intended to constitute an endorsement, explicit or implied, by the United States Government of any particular manufacturer's product or service.
 
 Disclaimer of Endorsement
+
 Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise, in this Work does not constitute an endorsement, recommendation, or favoring by the United States Government and shall not be used for advertising or product endorsement purposes.
