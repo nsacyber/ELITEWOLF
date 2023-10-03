@@ -1,3 +1,5 @@
+![EliteWolf_Cyan_Lowercase_PNG](https://github.com/nsacyber/ELITEWOLF/assets/136510124/058dff5a-7652-4923-907f-7cfb214ee2e7)
+
 ELITEWOLF:
 
 This repository will contain various ICS/SCADA/OT focused signatures and analytics. The end goal is to enable Critical Infrastructure Defenders, Intrusion Analysts, and others to implement continuous and vigilant system monitoring.
