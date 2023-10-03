@@ -1,4 +1,5 @@
 ELITEWOLF:
+
 This repository will contain various ICS/SCADA/OT focused signatures and analytics. The end goal is to enable Critical Infrastructure Defenders, Intrusion Analysts, and others to implement continuous and vigilant system monitoring.
 WARNING: These signatures/analytics aren't necessarily malicious activity. They will require follow on analysis to truly determine if this activity is malicious or not. 
 
