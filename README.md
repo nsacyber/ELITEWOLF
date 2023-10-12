@@ -1,4 +1,5 @@
-![EliteWolf_Cyan_Lowercase_PNG](https://github.com/nsacyber/ELITEWOLF/assets/136510124/058dff5a-7652-4923-907f-7cfb214ee2e7)
+
+![EliteWolf_Cyan_Lowercase_PNG](https://github.com/nsacyber/ELITEWOLF/assets/136510124/ffa91e06-31fd-4438-a0fc-75e0a4730dd3)
 
 # ELITEWOLF
 
