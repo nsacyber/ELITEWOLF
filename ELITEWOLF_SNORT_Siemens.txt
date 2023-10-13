@@ -3,3 +3,8 @@ alert tcp any 80 -> any any (msg: "ELITEWOLF S7-1200 Possible Siemens Web Activi
 alert tcp any 443 -> any any (msg: "ELITEWOLF S7-1200 Possible Siemens X509 certificate activity"; content:"S7-1200 Controller Family"; sid:1; rev:1;)
 alert tcp any 443 -> any any (msg: "ELITEWOLF S7-1200 Possible Siemens X509 certificate activity"; content:"commonName=S7-1200 Controller Family"; sid:1; rev:1;)
 alert tcp any 443 -> any any (msg: "ELITEWOLF S7-1200 Possible Siemens X509 certificate activity"; content:"issuer_CN: S7-1200 Controller Family"; sid:1; rev:1;)
+
+# Alert on a command that was is via s7-enumerate Redpoint Nmap NSE on TCP/102
+alert tcp any any -> any 102 (content: "|32 07 00 00 00 00 00 08 00 08|"; offset: 0; depth: 10; content: "|00 01 12 04 11 44 01 00|"; offset: 11; depth: 8; msg: "S7 Enumerate Redpoint NSE Request CPU Function Read SZL attempt";sid:1111301;priority:3;rev:1;)
+# Alert on a command that was is via s7-enumerate Redpoint Nmap NSE on TCP/102 from Non Authorized Hosts
+alert tcp !$S7_CLIENT any -> $S7_SERVER 102 (content: "|32 07 00 00 00 00 00 08 00 08|"; offset: 0; depth: 10; content: "|00 01 12 04 11 44 01 00|"; offset: 11; depth: 8; msg: "S7 Enumerate Redpoint NSE Request CPU Function Read SZL attempt From Non Authorized Host";sid:1111302;priority:1;rev:1;)
