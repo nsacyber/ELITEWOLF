@@ -1,0 +1,15 @@
+alert tcp any 443 -> any any (msg: "ELITEWOLF Niagara Possible Niagara certificate activity"; content:"NiagaraAX"; sid:1; rev:1;)
+alert tcp any 443 -> any any (msg: "ELITEWOLF Niagara Possible Niagara certificate activity"; content:"commonName=NiagaraAX"; sid:1; rev:1;)
+alert tcp any 443 -> any any (msg: "ELITEWOLF Niagara Possible Niagara certificate activity"; content:"issuer_CN: NiagaraAX"; sid:1; rev:1;)
+
+alert tcp any 443 -> any any (msg: "ELITEWOLF Niagara Possible Niagara certificate activity"; content:"Niagara4"; sid:1; rev:1;)
+alert tcp any 443 -> any any (msg: "ELITEWOLF Niagara Possible Niagara certificate activity"; content:"commonName=Niagara4"; sid:1; rev:1;)
+alert tcp any 443 -> any any (msg: "ELITEWOLF Niagara Possible Niagara certificate activity"; content:"issuer_CN: Niagara4"; sid:1; rev:1;)
+
+alert tcp any 443 -> any any (msg: "ELITEWOLF Niagara Possible Niagara certificate activity"; content:"NiagaraN4"; sid:1; rev:1;)
+alert tcp any 443 -> any any (msg: "ELITEWOLF Niagara Possible Niagara certificate activity"; content:"commonName=NiagaraN4"; sid:1; rev:1;)
+alert tcp any 443 -> any any (msg: "ELITEWOLF Niagara Possible Niagara certificate activity"; content:"issuer_CN: NiagaraN4"; sid:1; rev:1;)
+
+alert tcp any 443 -> any any (msg: "ELITEWOLF Niagara Possible Niagara certificate activity"; content:"Niagara"; sid:1; rev:1;)
+alert tcp any 443 -> any any (msg: "ELITEWOLF Niagara Possible Niagara certificate activity"; content:"commonName=Niagara"; sid:1; rev:1;)
+alert tcp any 443 -> any any (msg: "ELITEWOLF Niagara Possible Niagara certificate activity"; content:"issuer_CN: Niagara"; sid:1; rev:1;)
