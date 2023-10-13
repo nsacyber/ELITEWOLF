@@ -4,7 +4,9 @@
 # ELITEWOLF
 
 This repository contains various ICS/SCADA/OT focused signatures and analytics. The end goal is to enable Critical Infrastructure Defenders, Intrusion Analysts, and others to implement continuous and vigilant system monitoring.
-WARNING: These signatures/analytics aren't necessarily malicious activity. They require follow on analysis to truly determine if this activity is malicious or not. 
+
+> [!WARNING] 
+> These signatures/analytics aren't necessarily malicious activity. They require follow on analysis to truly determine if this activity is malicious or not. 
 
 
 ## Background
@@ -20,7 +22,8 @@ Exposure Across all Operational Technologies and Control Systems](https://media.
 
 ## SNORT Rules
 
-WARNING: These signatures/analytics aren't necessarily malicious activity. They require follow on analysis to truly determine if this activity is malicious or not. The provided SNORT rules are alerting rules. Investigation for accuracy is required for hits. The rules have been tested, but every system can be configured differently, so ensure that the signature is triggered properly or is adjusted as needed based on the sensors and the environment.
+>[!IMPORTANT] 
+> These signatures/analytics aren't necessarily malicious activity. They require follow on analysis to truly determine if this activity is malicious or not. The provided SNORT rules are alerting rules. Investigation for accuracy is required for hits. The rules have been tested, but every system can be configured differently, so ensure that the signature is triggered properly or is adjusted as needed based on the sensors and the environment.
 
 
 
