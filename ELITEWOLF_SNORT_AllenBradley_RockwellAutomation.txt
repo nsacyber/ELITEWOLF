@@ -1,14 +1,23 @@
-alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-TCP REQUEST"; content:"/rokform/advancedDiags?pageReq=tcp"; sid:1; rev:1;)
-alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-SYSTEM DATA DETAIL"; content:"/rokform/SysDataDetail?name="; sid:1; rev:1;)
-alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-UDP TABLE"; content:"/rokform/advancedDiags?pageReq=udptable"; sid:1; rev:1;)
-alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-TCP CONNECT"; content:"rokform/advancedDiags?pageReq=tcpconn"; sid:1; rev:1;)
-alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-IP ROUTE"; content:"/rokform/advancedDiags?pageReq=iproute"; sid:1; rev:1;)
-alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-GENERAL MEMORY"; content:"/rokform/advancedDiags?pageReq=genmem"; sid:1; rev:1;)
-alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-HEAP REQUEST"; content:"/rokform/advancedDiags?pageReq=heap"; sid:1; rev:1;)
-alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-ICMP REQUEST"; content:"/rokform/advancedDiags?pageReq=icmp"; sid:1; rev:1;)
-alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-ARP REQUEST"; content:"/rokform/advancedDiags?pageReq=arp"; sid:1; rev:1;)
-alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-UDP REQUEST"; content:"/rokform/advancedDiags?pageReq=udp"; sid:1; rev:1;)
-alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-IF REQUEST"; content:"/rokform/advancedDiags?pageReq=if"; sid:1; rev:1;)
-alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-IP REQUEST"; content:"/rokform/advancedDiags?pageReq=ip"; sid:1; rev:1;)
-alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-CSS Path"; content:"/css/radevice.css"; sid:1; rev:1;)
-alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-SYSTEM LIST DATA"; content:"/rokform/SysListDetail?name=";sid:1;rev:1;)
+# Alert on TCP traffic from any source to port 80 (HTTP) with a message about Allen-Bradley/Rockwell Automation URL Path Activity for TCP REQUEST.
+alert tcp any any -> any 80 (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-TCP REQUEST Detected - Potential Security Concern"; content:"/rokform/advancedDiags?pageReq=tcp"; nocase; threshold: type limit, track by_src, count 5, seconds 60; sid:1001; rev:1;)
+
+# Alert on TCP traffic from any source to port 80 (HTTP) with a message about Allen-Bradley/Rockwell Automation URL Path Activity for SYSTEM DATA DETAIL.
+alert tcp any any -> any 80 (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-SYSTEM DATA DETAIL Detected - Potential Security Concern"; content:"/rokform/SysDataDetail?name="; nocase; threshold: type limit, track by_src, count 5, seconds 60; sid:1002; rev:1;)
+
+# Alert on TCP traffic from any source to port 80 (HTTP) with a message about Allen-Bradley/Rockwell Automation URL Path Activity for UDP TABLE.
+alert tcp any any -> any 80 (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-UDP TABLE Detected - Potential Security Concern"; content:"/rokform/advancedDiags?pageReq=udptable"; nocase; threshold: type limit, track by_src, count 5, seconds 60; sid:1003; rev:1;)
+
+# Alert on TCP traffic from any source to port 80 (HTTP) with a message about Allen-Bradley/Rockwell Automation URL Path Activity for TCP CONNECT.
+alert tcp any any -> any 80 (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-TCP CONNECT Detected - Potential Security Concern"; content:"/rokform/advancedDiags?pageReq=tcpconn"; nocase; threshold: type limit, track by_src, count 5, seconds 60; sid:1004; rev:1;)
+
+# Alert on TCP traffic from any source to port 80 (HTTP) with a message about Allen-Bradley/Rockwell Automation URL Path Activity for IP ROUTE.
+alert tcp any any -> any 80 (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-IP ROUTE Detected - Potential Security Concern"; content:"/rokform/advancedDiags?pageReq=iproute"; nocase; threshold: type limit, track by_src, count 5, seconds 60; sid:1005; rev:1;)
+
+# Alert on TCP traffic from any source to port 80 (HTTP) with a message about Allen-Bradley/Rockwell Automation URL Path Activity for GENERAL MEMORY.
+alert tcp any any -> any 80 (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-GENERAL MEMORY Detected - Potential Security Concern"; content:"/rokform/advancedDiags?pageReq=genmem"; nocase; threshold: type limit, track by_src, count 5, seconds 60; sid:1006; rev:1;)
+
+# Alert on TCP traffic from any source to port 80 (HTTP) with a message about Allen-Bradley/Rockwell Automation URL Path Activity for HEAP REQUEST.
+alert tcp any any -> any 80 (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-HEAP REQUEST Detected - Potential Security Concern"; content:"/rokform/advancedDiags?pageReq=heap"; nocase; threshold: type limit, track by_src, count 5, seconds 60; sid:1007; rev:1;)
+
+# Alert on TCP traffic from any source to port 80 (HTTP) with a message about Allen-Bradley/Rockwell Automation URL Path Activity for ICMP REQUEST.
+alert tcp any any -> any 80 (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-ICMP REQUEST Detected - Potential Security Concern"; content:"/rokform/advancedDiags?pageReq=icmp"; nocase; threshold: type limit, track by

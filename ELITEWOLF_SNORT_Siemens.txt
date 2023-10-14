@@ -1,5 +1,14 @@
-alert tcp any 80 -> any any (msg: "ELITEWOLF S7-1200 Possible Siemens Web Activity"; content:"/CSS/S7Web.css"; sid:1; rev:1;)
-alert tcp any 80 -> any any (msg: "ELITEWOLF S7-1200 Possible Siemens Web Activity"; content:"/Images/CPU1200/"; sid:1; rev:1;)
-alert tcp any 443 -> any any (msg: "ELITEWOLF S7-1200 Possible Siemens X509 certificate activity"; content:"S7-1200 Controller Family"; sid:1; rev:1;)
-alert tcp any 443 -> any any (msg: "ELITEWOLF S7-1200 Possible Siemens X509 certificate activity"; content:"commonName=S7-1200 Controller Family"; sid:1; rev:1;)
-alert tcp any 443 -> any any (msg: "ELITEWOLF S7-1200 Possible Siemens X509 certificate activity"; content:"issuer_CN: S7-1200 Controller Family"; sid:1; rev:1;)
+# Alert on TCP traffic from any source to port 80 with a message about Possible Siemens S7-1200 Web Activity.
+alert tcp any 80 -> any any (msg: "ELITEWOLF S7-1200 Possible Siemens Web Activity Detected - Potential Security Concern"; content:"/CSS/S7Web.css"; nocase; threshold: type limit, track by_src, count 5, seconds 60; sid:10034; rev:1;)
+
+# Alert on TCP traffic from any source to port 80 with a message about Possible Siemens S7-1200 Web Activity.
+alert tcp any 80 -> any any (msg: "ELITEWOLF S7-1200 Possible Siemens Web Activity Detected - Potential Security Concern"; content:"/Images/CPU1200/"; nocase; threshold: type limit, track by_src, count 5, seconds 60; sid:10035; rev:1;)
+
+# Alert on TCP traffic from any source to port 443 with a message about Possible Siemens S7-1200 X509 certificate activity.
+alert tcp any 443 -> any any (msg: "ELITEWOLF S7-1200 Possible Siemens X509 certificate activity Detected - Potential Security Concern"; content:"S7-1200 Controller Family"; threshold: type limit, track by_src, count 5, seconds 60; sid:10036; rev:1;)
+
+# Alert on TCP traffic from any source to port 443 with a message about Possible Siemens S7-1200 X509 certificate activity.
+alert tcp any 443 -> any any (msg: "ELITEWOLF S7-1200 Possible Siemens X509 certificate activity Detected - Potential Security Concern"; content:"commonName=S7-1200 Controller Family"; nocase; threshold: type limit, track by_src, count 5, seconds 60; sid:10037; rev:1;)
+
+# Alert on TCP traffic from any source to port 443 with a message about Possible Siemens S7-1200 X509 certificate activity.
+alert tcp any 443 -> any any (msg: "ELITEWOLF S7-1200 Possible Siemens X509 certificate activity Detected - Potential Security Concern"; content:"issuer_CN: S7-1200 Controller Family"; nocase; threshold: type limit, track by_src, count 5, seconds 60; sid:10038; rev:1;)
