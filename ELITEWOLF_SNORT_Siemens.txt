@@ -4,4 +4,4 @@ alert tcp any 443 -> any any (msg: "ELITEWOLF S7-1200 Possible Siemens X509 cert
 alert tcp any 443 -> any any (msg: "ELITEWOLF S7-1200 Possible Siemens X509 certificate activity"; content:"commonName=S7-1200 Controller Family"; sid:1; rev:1;)
 alert tcp any 443 -> any any (msg: "ELITEWOLF S7-1200 Possible Siemens X509 certificate activity"; content:"issuer_CN: S7-1200 Controller Family"; sid:1; rev:1;)
 
-alert tcp any any -> any 80 (msg:"ELITEWOLF SIEMENS LOGO! Attempted bruteforce on the web panel ";content:"POST /AJAX" ;content:"UAMLOGIN:"; threshold:type limit, track by_src, count 5, seconds 15; sid:1; rev:1;)
+alert tcp any any -> any 80 (msg:"ELITEWOLF SIEMENS LOGO! Attempted bruteforce on the web panel ";content:"POST /AJAX" ;content:"UAMCHAL:"; threshold:type limit, track by_src, count 5, seconds 15; sid:1; rev:1;)
